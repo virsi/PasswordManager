@@ -1,3 +1,5 @@
 /Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles/password_manager.dir
 /Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles/edit_cache.dir
 /Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles/rebuild_cache.dir
+/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles/password_manager_autogen_timestamp_deps.dir
+/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles/password_manager_autogen.dir

@@ -27,6 +27,10 @@ DatabaseManager::~DatabaseManager() {
 }
 
 bool DatabaseManager::openDatabase() {
+    if (db.isOpen()) {
+        return true; // База данных уже открыта
+    }
+
     if (!db.open()) {
         qDebug() << "Error: Unable to open database" << db.lastError();
         return false;

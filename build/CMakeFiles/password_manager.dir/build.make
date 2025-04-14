@@ -69,10 +69,31 @@ include CMakeFiles/password_manager.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/password_manager.dir/flags.make
 
+password_manager_autogen/timestamp: /usr/local/opt/qt/share/qt/libexec/moc
+password_manager_autogen/timestamp: /usr/local/opt/qt/share/qt/libexec/uic
+password_manager_autogen/timestamp: CMakeFiles/password_manager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target password_manager"
+	/usr/local/Cellar/cmake/3.30.3/bin/cmake -E cmake_autogen /Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles/password_manager_autogen.dir/AutogenInfo.json ""
+	/usr/local/Cellar/cmake/3.30.3/bin/cmake -E touch /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/timestamp
+
+CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o: CMakeFiles/password_manager.dir/flags.make
+CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o: password_manager_autogen/mocs_compilation.cpp
+CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o: CMakeFiles/password_manager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o -MF CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o -c /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/mocs_compilation.cpp
+
+CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/mocs_compilation.cpp > CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/mocs_compilation.cpp -o CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/password_manager.dir/src/main.cpp.o: CMakeFiles/password_manager.dir/flags.make
 CMakeFiles/password_manager.dir/src/main.cpp.o: /Users/EV/Desktop/BMSTU/PasswordManager/src/main.cpp
 CMakeFiles/password_manager.dir/src/main.cpp.o: CMakeFiles/password_manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/password_manager.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/password_manager.dir/src/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/password_manager.dir/src/main.cpp.o -MF CMakeFiles/password_manager.dir/src/main.cpp.o.d -o CMakeFiles/password_manager.dir/src/main.cpp.o -c /Users/EV/Desktop/BMSTU/PasswordManager/src/main.cpp
 
 CMakeFiles/password_manager.dir/src/main.cpp.i: cmake_force
@@ -86,7 +107,7 @@ CMakeFiles/password_manager.dir/src/main.cpp.s: cmake_force
 CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o: CMakeFiles/password_manager.dir/flags.make
 CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o: /Users/EV/Desktop/BMSTU/PasswordManager/src/DatabaseManager/DatabaseManager.cpp
 CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o: CMakeFiles/password_manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o -MF CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o.d -o CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o -c /Users/EV/Desktop/BMSTU/PasswordManager/src/DatabaseManager/DatabaseManager.cpp
 
 CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.i: cmake_force
@@ -100,7 +121,7 @@ CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.s: cmake
 CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o: CMakeFiles/password_manager.dir/flags.make
 CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o: /Users/EV/Desktop/BMSTU/PasswordManager/src/CryptoManager/CryptoManager.cpp
 CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o: CMakeFiles/password_manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o -MF CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o.d -o CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o -c /Users/EV/Desktop/BMSTU/PasswordManager/src/CryptoManager/CryptoManager.cpp
 
 CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.i: cmake_force
@@ -114,7 +135,7 @@ CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.s: cmake_for
 CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o: CMakeFiles/password_manager.dir/flags.make
 CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o: /Users/EV/Desktop/BMSTU/PasswordManager/src/PasswordManager/PasswordManager.cpp
 CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o: CMakeFiles/password_manager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o -MF CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o.d -o CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o -c /Users/EV/Desktop/BMSTU/PasswordManager/src/PasswordManager/PasswordManager.cpp
 
 CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.i: cmake_force
@@ -125,30 +146,47 @@ CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/EV/Desktop/BMSTU/PasswordManager/src/PasswordManager/PasswordManager.cpp -o CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.s
 
+CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o: CMakeFiles/password_manager.dir/flags.make
+CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o: /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/MainWindow.cpp
+CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o: CMakeFiles/password_manager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o -MF CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o.d -o CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o -c /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/MainWindow.cpp
+
+CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/MainWindow.cpp > CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.i
+
+CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/MainWindow.cpp -o CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.s
+
 # Object files for target password_manager
 password_manager_OBJECTS = \
+"CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/password_manager.dir/src/main.cpp.o" \
 "CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o" \
 "CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o" \
-"CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o"
+"CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o" \
+"CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o"
 
 # External object files for target password_manager
 password_manager_EXTERNAL_OBJECTS =
 
+password_manager: CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o
 password_manager: CMakeFiles/password_manager.dir/src/main.cpp.o
 password_manager: CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o
 password_manager: CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o
 password_manager: CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o
+password_manager: CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o
 password_manager: CMakeFiles/password_manager.dir/build.make
 password_manager: /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets
 password_manager: /usr/local/opt/qt/lib/QtSql.framework/Versions/A/QtSql
-password_manager: /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/lib/libsqlite3.tbd
 password_manager: /usr/local/Cellar/openssl@3/3.4.1/lib/libssl.dylib
 password_manager: /usr/local/Cellar/openssl@3/3.4.1/lib/libcrypto.dylib
 password_manager: /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui
 password_manager: /usr/local/opt/qt/lib/QtCore.framework/Versions/A/QtCore
 password_manager: CMakeFiles/password_manager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable password_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable password_manager"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/password_manager.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,7 +197,7 @@ CMakeFiles/password_manager.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/password_manager.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/password_manager.dir/clean
 
-CMakeFiles/password_manager.dir/depend:
+CMakeFiles/password_manager.dir/depend: password_manager_autogen/timestamp
 	cd /Users/EV/Desktop/BMSTU/PasswordManager/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/EV/Desktop/BMSTU/PasswordManager /Users/EV/Desktop/BMSTU/PasswordManager /Users/EV/Desktop/BMSTU/PasswordManager/build /Users/EV/Desktop/BMSTU/PasswordManager/build /Users/EV/Desktop/BMSTU/PasswordManager/build/CMakeFiles/password_manager.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/password_manager.dir/depend
 
