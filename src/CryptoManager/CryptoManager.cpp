@@ -1,4 +1,4 @@
-#include "CryptoManager.h"
+#include "./CryptoManager.h"
 #include <QCryptographicHash>
 #include <openssl/evp.h>
 #include <openssl/rand.h>

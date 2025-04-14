@@ -5,6 +5,13 @@
 #include <QtSql/QSqlQuery>
 #include <QString>
 
+struct PasswordEntry {
+    int id;
+    QString service;
+    QString username;
+    QString encryptedPassword;
+};
+
 class DatabaseManager {
 public:
     DatabaseManager();

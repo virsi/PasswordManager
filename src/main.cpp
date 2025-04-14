@@ -1,11 +1,11 @@
-#include <QCoreApplication>
+#include <QApplication>
 #include <QDebug>
-#include "CryptoManager.h"
+#include "CryptoManager/CryptoManager.h"
 #include <QMainWindow>
-#include "DatabaseManager.h"
+#include "DatabaseManager/DatabaseManager.h"
 
 int main(int argc, char *argv[]) {
-    QCoreApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     CryptoManager crypto("MyStrongPassword");
 

@@ -1,11 +1,25 @@
-#include "DatabaseManager.h"
-#include "PasswordManager.h"
+#include "./DatabaseManager.h"
+#include "../PasswordManager/PasswordManager.h"
 #include <QtSql/QSqlError>
+#include <QDir>
 #include <QDebug>
 
 DatabaseManager::DatabaseManager() {
+    // Создаём директорию "data", если она не существует
+    QDir dataDir("../data");
+    if (!dataDir.exists()) {
+        if (!dataDir.mkpath(".")) {
+            qDebug() << "Ошибка: не удалось создать директорию 'data'";
+            return;
+        }
+    }
+
+    // Устанавливаем путь к базе данных в директории "data"
+    QString dbPath = dataDir.filePath("passwords.db");
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("passwords.db");
+    db.setDatabaseName(dbPath);
+
+    qDebug() << "База данных будет сохранена по пути:" << dbPath;
 }
 
 DatabaseManager::~DatabaseManager() {

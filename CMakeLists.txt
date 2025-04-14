@@ -12,13 +12,15 @@ find_package(OpenSSL REQUIRED)
 # Исходные файлы
 set(SOURCES
     src/main.cpp
-    src/DatabaseManager.cpp
-    src/CryptoManager.cpp
+    src/DatabaseManager/DatabaseManager.cpp
+    src/CryptoManager/CryptoManager.cpp
+    src/PasswordManager/PasswordManager.cpp
 )
 
 set(HEADERS
-    src/DatabaseManager.h
-    src/CryptoManager.h
+    src/DatabaseManager/DatabaseManager.h
+    src/CryptoManager/CryptoManager.h
+    src/PasswordManager/PasswordManager.h
 )
 
 # Основной исполняемый файл
