@@ -1,4 +1,4 @@
-/Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/moc_MainWindow.cpp: /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/MainWindow.h \
+/Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/moc_AddPasswordDialog.cpp: /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/AddPasswordDialog.h \
   /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/AvailabilityInternal.h \
@@ -110,8 +110,6 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_copy.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
-  /Users/EV/Desktop/BMSTU/PasswordManager/src/DatabaseManager/DatabaseManager.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
@@ -119,7 +117,6 @@
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qarraydata.h \
@@ -161,20 +158,17 @@
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlist.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qmap.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qmargins.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qmath.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qmetacontainer.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qmetaobject.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qmetatype.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qminmax.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qnamespace.h \
@@ -189,7 +183,6 @@
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qprocessordetection.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qrect.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qregularexpression.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qset.h \
@@ -272,41 +265,21 @@
   /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/QSqlDatabase \
-  /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/QSqlQuery \
-  /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qsqldatabase.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qsqlquery.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qtsql-config.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qtsqlexports.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qtsqlglobal.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QDialog \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QListWidget \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QTableWidget \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemview.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlineedit.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlistview.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlistwidget.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtableview.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtablewidget.h \
-  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \

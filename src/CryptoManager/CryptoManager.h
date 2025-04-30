@@ -3,13 +3,17 @@
 
 #include <QString>
 #include <QByteArray>
+#include <stdexcept>
 
 class CryptoManager {
 public:
-    CryptoManager(const QString& password);
+    explicit CryptoManager(const QString& password);
+
+    void setPassword(const QString& password);
 
     QByteArray encrypt(const QString& plaintext);
-    QString decrypt(const QByteArray& ciphertext);
+
+    QString decrypt(const QByteArray& data);
 
 private:
     QByteArray generateKey(const QString& password);

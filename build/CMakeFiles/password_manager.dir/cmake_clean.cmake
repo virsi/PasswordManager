@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o.d"
   "CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o"
   "CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o.d"
+  "CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.o"
+  "CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.o.d"
   "CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o"
   "CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o.d"
   "CMakeFiles/password_manager.dir/src/main.cpp.o"

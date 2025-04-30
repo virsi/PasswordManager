@@ -1,9 +1,9 @@
 CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o: \
   /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/mocs_compilation.cpp \
-  /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/moc_MainWindow.cpp \
-  /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/../../../src/UI/MainWindow.h \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QMainWindow \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/moc_AddPasswordDialog.cpp \
+  /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/../../../src/UI/AddPasswordDialog.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QDialog \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qdialog.h \
   /usr/local/opt/qt/include/QtWidgets/qtwidgetsglobal.h \
   /usr/local/opt/qt/include/QtGui/qtguiglobal.h \
   /usr/local/opt/qt/include/QtCore/qglobal.h \
@@ -364,13 +364,38 @@ CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o:
   /usr/local/opt/qt/include/QtWidgets/qsizepolicy.h \
   /usr/local/opt/qt/include/QtGui/qcursor.h \
   /usr/local/opt/qt/include/QtGui/qbitmap.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QLineEdit \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /usr/local/opt/qt/include/QtWidgets/qframe.h \
+  /usr/local/opt/qt/include/QtGui/qtextcursor.h \
+  /usr/local/opt/qt/include/QtGui/qtextdocument.h \
+  /usr/local/opt/qt/include/QtCore/qurl.h \
+  /usr/local/opt/qt/include/QtGui/qtextformat.h \
+  /usr/local/opt/qt/include/QtGui/qpen.h \
+  /usr/local/opt/qt/include/QtGui/qtextoption.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QPushButton \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /usr/local/opt/qt/include/QtWidgets/qabstractbutton.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QVBoxLayout \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qboxlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qlayoutitem.h \
+  /usr/local/opt/qt/include/QtWidgets/qboxlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qgridlayout.h \
+  /usr/local/opt/qt/include/QtCore/qtmochelpers.h \
+  /usr/local/opt/qt/include/QtCore/qtmocconstants.h \
+  /usr/local/opt/qt/include/QtCore/q20algorithm.h \
+  /usr/local/opt/qt/include/QtCore/q23type_traits.h \
+  /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/moc_MainWindow.cpp \
+  /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/../../../src/UI/MainWindow.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QMainWindow \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /usr/local/opt/qt/include/QtWidgets/qtabwidget.h \
   /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QTableWidget \
   /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qtablewidget.h \
   /usr/local/opt/qt/include/QtWidgets/qtableview.h \
   /usr/local/opt/qt/include/QtWidgets/qabstractitemview.h \
   /usr/local/opt/qt/include/QtWidgets/qabstractscrollarea.h \
-  /usr/local/opt/qt/include/QtWidgets/qframe.h \
   /usr/local/opt/qt/include/QtCore/qabstractitemmodel.h \
   /usr/local/opt/qt/include/QtCore/qitemselectionmodel.h \
   /usr/local/opt/qt/include/QtWidgets/qabstractitemdelegate.h \
@@ -384,7 +409,17 @@ CMakeFiles/password_manager.dir/password_manager_autogen/mocs_compilation.cpp.o:
   /usr/local/opt/qt/include/QtWidgets/qstyle.h \
   /usr/local/opt/qt/include/QtWidgets/qtabbar.h \
   /usr/local/opt/qt/include/QtWidgets/qrubberband.h \
-  /usr/local/opt/qt/include/QtCore/qtmochelpers.h \
-  /usr/local/opt/qt/include/QtCore/qtmocconstants.h \
-  /usr/local/opt/qt/include/QtCore/q20algorithm.h \
-  /usr/local/opt/qt/include/QtCore/q23type_traits.h
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QListWidget \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /usr/local/opt/qt/include/QtWidgets/qlistview.h \
+  /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/WAYUIA5GRM/../../../src/UI/../DatabaseManager/DatabaseManager.h \
+  /usr/local/opt/qt/include/QtSql/QSqlDatabase \
+  /usr/local/opt/qt/include/QtSql/qsqldatabase.h \
+  /usr/local/opt/qt/include/QtSql/qtsqlglobal.h \
+  /usr/local/opt/qt/include/QtSql/qtsql-config.h \
+  /usr/local/opt/qt/include/QtSql/qtsqlexports.h \
+  /usr/local/opt/qt/include/QtCore/qmetaobject.h \
+  /usr/local/opt/qt/include/QtSql/QSqlQuery \
+  /usr/local/opt/qt/include/QtSql/qsqlquery.h \
+  /usr/local/opt/qt/lib/QtCore.framework/Headers/QString \
+  /usr/local/opt/qt/lib/QtCore.framework/Headers/qstring.h

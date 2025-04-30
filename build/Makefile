@@ -251,6 +251,30 @@ src/PasswordManager/PasswordManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/password_manager.dir/build.make CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.s
 .PHONY : src/PasswordManager/PasswordManager.cpp.s
 
+src/UI/AddPasswordDialog.o: src/UI/AddPasswordDialog.cpp.o
+.PHONY : src/UI/AddPasswordDialog.o
+
+# target to build an object file
+src/UI/AddPasswordDialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/password_manager.dir/build.make CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.o
+.PHONY : src/UI/AddPasswordDialog.cpp.o
+
+src/UI/AddPasswordDialog.i: src/UI/AddPasswordDialog.cpp.i
+.PHONY : src/UI/AddPasswordDialog.i
+
+# target to preprocess a source file
+src/UI/AddPasswordDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/password_manager.dir/build.make CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.i
+.PHONY : src/UI/AddPasswordDialog.cpp.i
+
+src/UI/AddPasswordDialog.s: src/UI/AddPasswordDialog.cpp.s
+.PHONY : src/UI/AddPasswordDialog.s
+
+# target to generate assembly for a file
+src/UI/AddPasswordDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/password_manager.dir/build.make CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.s
+.PHONY : src/UI/AddPasswordDialog.cpp.s
+
 src/UI/MainWindow.o: src/UI/MainWindow.cpp.o
 .PHONY : src/UI/MainWindow.o
 
@@ -322,6 +346,9 @@ help:
 	@echo "... src/PasswordManager/PasswordManager.o"
 	@echo "... src/PasswordManager/PasswordManager.i"
 	@echo "... src/PasswordManager/PasswordManager.s"
+	@echo "... src/UI/AddPasswordDialog.o"
+	@echo "... src/UI/AddPasswordDialog.i"
+	@echo "... src/UI/AddPasswordDialog.s"
 	@echo "... src/UI/MainWindow.o"
 	@echo "... src/UI/MainWindow.i"
 	@echo "... src/UI/MainWindow.s"

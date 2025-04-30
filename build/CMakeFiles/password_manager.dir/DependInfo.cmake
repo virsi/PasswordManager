@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/EV/Desktop/BMSTU/PasswordManager/src/CryptoManager/CryptoManager.cpp" "CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o" "gcc" "CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o.d"
   "/Users/EV/Desktop/BMSTU/PasswordManager/src/DatabaseManager/DatabaseManager.cpp" "CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o" "gcc" "CMakeFiles/password_manager.dir/src/DatabaseManager/DatabaseManager.cpp.o.d"
   "/Users/EV/Desktop/BMSTU/PasswordManager/src/PasswordManager/PasswordManager.cpp" "CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o" "gcc" "CMakeFiles/password_manager.dir/src/PasswordManager/PasswordManager.cpp.o.d"
+  "/Users/EV/Desktop/BMSTU/PasswordManager/src/UI/AddPasswordDialog.cpp" "CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.o" "gcc" "CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.o.d"
   "/Users/EV/Desktop/BMSTU/PasswordManager/src/UI/MainWindow.cpp" "CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o" "gcc" "CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o.d"
   "/Users/EV/Desktop/BMSTU/PasswordManager/src/main.cpp" "CMakeFiles/password_manager.dir/src/main.cpp.o" "gcc" "CMakeFiles/password_manager.dir/src/main.cpp.o.d"
   )

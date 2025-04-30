@@ -412,4 +412,19 @@ CMakeFiles/password_manager.dir/src/main.cpp.o: \
   /usr/local/opt/qt/include/QtWidgets/qabstractslider.h \
   /usr/local/opt/qt/include/QtWidgets/qstyle.h \
   /usr/local/opt/qt/include/QtWidgets/qtabbar.h \
-  /usr/local/opt/qt/include/QtWidgets/qrubberband.h
+  /usr/local/opt/qt/include/QtWidgets/qrubberband.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QPushButton \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /usr/local/opt/qt/include/QtWidgets/qabstractbutton.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QLineEdit \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /usr/local/opt/qt/include/QtGui/qtextcursor.h \
+  /usr/local/opt/qt/include/QtGui/qtextdocument.h \
+  /usr/local/opt/qt/include/QtCore/qurl.h \
+  /usr/local/opt/qt/include/QtGui/qtextformat.h \
+  /usr/local/opt/qt/include/QtGui/qpen.h \
+  /usr/local/opt/qt/include/QtGui/qtextoption.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QListWidget \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /usr/local/opt/qt/include/QtWidgets/qlistview.h \
+  /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/../DatabaseManager/DatabaseManager.h

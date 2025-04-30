@@ -1,9 +1,10 @@
-CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o: \
-  /Users/EV/Desktop/BMSTU/PasswordManager/src/CryptoManager/CryptoManager.cpp \
-  /Users/EV/Desktop/BMSTU/PasswordManager/src/CryptoManager/./CryptoManager.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QString \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qstring.h \
-  /usr/local/opt/qt/include/QtCore/qchar.h \
+CMakeFiles/password_manager.dir/src/UI/AddPasswordDialog.cpp.o: \
+  /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/AddPasswordDialog.cpp \
+  /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/AddPasswordDialog.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QDialog \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qdialog.h \
+  /usr/local/opt/qt/include/QtWidgets/qtwidgetsglobal.h \
+  /usr/local/opt/qt/include/QtGui/qtguiglobal.h \
   /usr/local/opt/qt/include/QtCore/qglobal.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
@@ -221,15 +222,27 @@ CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o: \
   /usr/local/opt/qt/include/QtCore/qtresource.h \
   /usr/local/opt/qt/include/QtCore/qttranslation.h \
   /usr/local/opt/qt/include/QtCore/qversiontagging.h \
+  /usr/local/opt/qt/include/QtGui/qtgui-config.h \
+  /usr/local/opt/qt/include/QtGui/qtguiexports.h \
+  /usr/local/opt/qt/include/QtWidgets/qtwidgets-config.h \
+  /usr/local/opt/qt/include/QtWidgets/qtwidgetsexports.h \
+  /usr/local/opt/qt/include/QtWidgets/qwidget.h \
+  /usr/local/opt/qt/include/QtGui/qwindowdefs.h \
+  /usr/local/opt/qt/include/QtCore/qobjectdefs.h \
+  /usr/local/opt/qt/include/QtCore/qnamespace.h \
   /usr/local/opt/qt/include/QtCore/qcompare.h \
   /usr/local/opt/qt/include/QtCore/qstdlibdetection.h \
   /usr/local/opt/qt/include/QtCore/qcomparehelpers.h \
   /usr/local/opt/qt/include/QtCore/q20type_traits.h \
+  /usr/local/opt/qt/include/QtCore/qtmetamacros.h \
+  /usr/local/opt/qt/include/QtCore/qobjectdefs_impl.h \
+  /usr/local/opt/qt/include/QtCore/qfunctionaltools_impl.h \
+  /usr/local/opt/qt/include/QtCore/qobject.h \
+  /usr/local/opt/qt/include/QtCore/qstring.h \
+  /usr/local/opt/qt/include/QtCore/qchar.h \
   /usr/local/opt/qt/include/QtCore/qstringview.h \
   /usr/local/opt/qt/include/QtCore/qbytearray.h \
   /usr/local/opt/qt/include/QtCore/qrefcount.h \
-  /usr/local/opt/qt/include/QtCore/qnamespace.h \
-  /usr/local/opt/qt/include/QtCore/qtmetamacros.h \
   /usr/local/opt/qt/include/QtCore/qarraydata.h \
   /usr/local/opt/qt/include/QtCore/qpair.h \
   /usr/local/opt/qt/include/QtCore/qarraydatapointer.h \
@@ -260,116 +273,23 @@ CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o: \
   /usr/local/opt/qt/include/QtCore/qutf8stringview.h \
   /usr/local/opt/qt/include/QtCore/qstringtokenizer.h \
   /usr/local/opt/qt/include/QtCore/qstringbuilder.h \
-  /usr/local/opt/qt/include/QtCore/qstring.h \
   /usr/local/opt/qt/include/QtCore/qstringconverter.h \
   /usr/local/opt/qt/include/QtCore/qstringconverter_base.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QByteArray \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qbytearray.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QCryptographicHash \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qcryptographichash.h \
-  /usr/local/opt/qt/include/QtCore/qobjectdefs.h \
-  /usr/local/opt/qt/include/QtCore/qobjectdefs_impl.h \
-  /usr/local/opt/qt/include/QtCore/qfunctionaltools_impl.h \
-  /usr/local/opt/qt/include/QtCore/qspan.h \
-  /usr/local/opt/qt/include/QtCore/q20iterator.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/evp.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/macros.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/opensslconf.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/configuration.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/opensslv.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/types.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/e_os2.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_char.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_short.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_caddr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_addr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_port_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino64_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_nlink_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_suseconds_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_def.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_set.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_clr.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_zero.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_isset.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_copy.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/safestack.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/stack.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/core.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/core_dispatch.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/indicator.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/params.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/bn.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/crypto.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/cryptoerr.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/symhacks.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/cryptoerr_legacy.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/sched.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/qos.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/bnerr.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/bio.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/bioerr.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/evperr.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/objects.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/obj_mac.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/asn1.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/asn1err.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/objectserr.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/rand.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/randerr.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/err.h \
-  /usr/local/Cellar/openssl@3/3.4.1/include/openssl/lhash.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/errno.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QDebug \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
-  /usr/local/opt/qt/include/QtCore/qfloat16.h \
+  /usr/local/opt/qt/include/QtCore/qlist.h \
   /usr/local/opt/qt/include/QtCore/qhashfunctions.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/numeric \
-  /usr/local/opt/qt/include/QtCore/qmath.h \
+  /usr/local/opt/qt/include/QtCore/qiterator.h \
+  /usr/local/opt/qt/include/QtCore/qbytearraylist.h \
+  /usr/local/opt/qt/include/QtCore/qstringlist.h \
   /usr/local/opt/qt/include/QtCore/qalgorithms.h \
-  /usr/local/opt/qt/include/QtCore/qtformat_impl.h \
-  /usr/local/opt/qt/include/QtCore/qtextstream.h \
-  /usr/local/opt/qt/include/QtCore/qiodevicebase.h \
-  /usr/local/opt/qt/include/QtCore/qcontiguouscache.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \
-  /usr/local/opt/qt/include/QtCore/qsharedpointer.h \
-  /usr/local/opt/qt/include/QtCore/qshareddata.h \
-  /usr/local/opt/qt/include/QtCore/qsharedpointer_impl.h \
+  /usr/local/opt/qt/include/QtCore/qstringmatcher.h \
+  /usr/local/opt/qt/include/QtCore/qscopedpointer.h \
   /usr/local/opt/qt/include/QtCore/qmetatype.h \
   /usr/local/opt/qt/include/QtCore/qdatastream.h \
-  /usr/local/opt/qt/include/QtCore/qscopedpointer.h \
+  /usr/local/opt/qt/include/QtCore/qiodevicebase.h \
+  /usr/local/opt/qt/include/QtCore/qfloat16.h \
+  /usr/local/opt/qt/include/QtCore/qmath.h \
+  /usr/local/opt/qt/include/QtCore/qtformat_impl.h \
   /usr/local/opt/qt/include/QtCore/qiterable.h \
   /usr/local/opt/qt/include/QtCore/qmetacontainer.h \
   /usr/local/opt/qt/include/QtCore/qcontainerinfo.h \
@@ -377,25 +297,87 @@ CMakeFiles/password_manager.dir/src/CryptoManager/CryptoManager.cpp.o: \
   /usr/local/opt/qt/include/QtCore/qscopeguard.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/list \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
+  /usr/local/opt/qt/include/QtCore/qobject_impl.h \
+  /usr/local/opt/qt/include/QtCore/qbindingstorage.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ctime \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ratio \
+  /usr/local/opt/qt/include/QtCore/qmargins.h \
+  /usr/local/opt/qt/include/QtCore/q23utility.h \
+  /usr/local/opt/qt/include/QtCore/q20utility.h \
+  /usr/local/opt/qt/include/QtGui/qaction.h \
+  /usr/local/opt/qt/include/QtGui/qkeysequence.h \
+  /usr/local/opt/qt/include/QtGui/qicon.h \
+  /usr/local/opt/qt/include/QtCore/qsize.h \
+  /usr/local/opt/qt/include/QtGui/qpixmap.h \
+  /usr/local/opt/qt/include/QtGui/qpaintdevice.h \
+  /usr/local/opt/qt/include/QtCore/qrect.h \
+  /usr/local/opt/qt/include/QtCore/qpoint.h \
+  /usr/local/opt/qt/include/QtGui/qcolor.h \
+  /usr/local/opt/qt/include/QtGui/qrgb.h \
+  /usr/local/opt/qt/include/QtGui/qrgba64.h \
+  /usr/local/opt/qt/include/QtCore/qshareddata.h \
+  /usr/local/opt/qt/include/QtGui/qimage.h \
+  /usr/local/opt/qt/include/QtGui/qpixelformat.h \
+  /usr/local/opt/qt/include/QtGui/qtransform.h \
+  /usr/local/opt/qt/include/QtGui/qpolygon.h \
+  /usr/local/opt/qt/include/QtGui/qregion.h \
+  /usr/local/opt/qt/include/QtCore/qspan.h \
+  /usr/local/opt/qt/include/QtCore/q20iterator.h \
+  /usr/local/opt/qt/include/QtCore/qline.h \
+  /usr/local/opt/qt/include/QtCore/qvariant.h \
+  /usr/local/opt/qt/include/QtCore/qdebug.h \
+  /usr/local/opt/qt/include/QtCore/qtextstream.h \
+  /usr/local/opt/qt/include/QtCore/qcontiguouscache.h \
+  /usr/local/opt/qt/include/QtCore/qsharedpointer.h \
+  /usr/local/opt/qt/include/QtCore/qsharedpointer_impl.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/set \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/unordered_set \
-  /usr/local/opt/qt/include/QtCore/qlist.h \
-  /usr/local/opt/qt/include/QtCore/qiterator.h \
-  /usr/local/opt/qt/include/QtCore/qbytearraylist.h \
-  /usr/local/opt/qt/include/QtCore/qstringlist.h \
-  /usr/local/opt/qt/include/QtCore/qstringmatcher.h \
   /usr/local/opt/qt/include/QtCore/qmap.h \
   /usr/local/opt/qt/include/QtCore/qshareddata_impl.h \
   /usr/local/opt/qt/include/QtCore/qset.h \
   /usr/local/opt/qt/include/QtCore/qhash.h \
-  /usr/local/opt/qt/include/QtCore/qvarlengtharray.h
+  /usr/local/opt/qt/include/QtCore/qvarlengtharray.h \
+  /usr/local/opt/qt/include/QtGui/qpalette.h \
+  /usr/local/opt/qt/include/QtGui/qbrush.h \
+  /usr/local/opt/qt/include/QtGui/qfont.h \
+  /usr/local/opt/qt/include/QtCore/qendian.h \
+  /usr/local/opt/qt/include/QtGui/qfontmetrics.h \
+  /usr/local/opt/qt/include/QtGui/qfontinfo.h \
+  /usr/local/opt/qt/include/QtGui/qfontvariableaxis.h \
+  /usr/local/opt/qt/include/QtWidgets/qsizepolicy.h \
+  /usr/local/opt/qt/include/QtGui/qcursor.h \
+  /usr/local/opt/qt/include/QtGui/qbitmap.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QLineEdit \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /usr/local/opt/qt/include/QtWidgets/qframe.h \
+  /usr/local/opt/qt/include/QtGui/qtextcursor.h \
+  /usr/local/opt/qt/include/QtGui/qtextdocument.h \
+  /usr/local/opt/qt/include/QtCore/qurl.h \
+  /usr/local/opt/qt/include/QtGui/qtextformat.h \
+  /usr/local/opt/qt/include/QtGui/qpen.h \
+  /usr/local/opt/qt/include/QtGui/qtextoption.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QPushButton \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /usr/local/opt/qt/include/QtWidgets/qabstractbutton.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QVBoxLayout \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qboxlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qlayoutitem.h \
+  /usr/local/opt/qt/include/QtWidgets/qboxlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qgridlayout.h

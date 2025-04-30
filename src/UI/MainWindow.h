@@ -3,18 +3,36 @@
 
 #include <QMainWindow>
 #include <QTableWidget>
+#include <QPushButton>
+#include <QLineEdit>
+#include <QListWidget>
+#include "../DatabaseManager/DatabaseManager.h"
 
 class MainWindow : public QMainWindow {
-    Q_OBJECT // Необходим для работы механизма сигналов и слотов Qt
+    Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    explicit MainWindow(QWidget *parent = nullptr);
 
 private:
-    QTableWidget* tableWidget;
+    QTableWidget *passwordTable;
+    QPushButton *addButton;
+    QPushButton *editButton;
+    QPushButton *deleteButton;
+    QLineEdit *searchField;
+    QListWidget *categoryList;
+
+    DatabaseManager dbManager;
+
+    void loadPasswords();
     void setupUI();
-    void loadPasswords(); // загрузка паролей из базы
+    void populateCategories();
+
+private slots:
+    void onAddClicked();
+    void onEditClicked();
+    void onDeleteClicked();
+
 };
 
 #endif // MAINWINDOW_H

@@ -8,7 +8,7 @@
 struct PasswordEntry {
     int id;
     QString service;
-    QString username;
+    QString login;
     QString encryptedPassword;
 };
 
@@ -20,9 +20,9 @@ public:
     bool openDatabase();
     void closeDatabase();
     bool createTable();
-    bool addPassword(const QString &service, const QString &login, const QString &password);
+    bool addPassword(const QString &service, const QString &login, const QByteArray &password);
     bool getPasswords();
-    bool insertPassword(const QString& service, const QString& username, const QByteArray& encryptedPassword);
+    bool insertPassword(const QString& service, const QString& login, const QByteArray& encryptedPassword);
     bool updatePassword(int id, const QByteArray& encryptedPassword);
     bool deletePassword(int id);
     QVector<PasswordEntry> getAllPasswords();

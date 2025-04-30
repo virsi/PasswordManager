@@ -383,19 +383,20 @@ CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o: \
   /usr/local/opt/qt/include/QtWidgets/qstyle.h \
   /usr/local/opt/qt/include/QtWidgets/qtabbar.h \
   /usr/local/opt/qt/include/QtWidgets/qrubberband.h \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /usr/local/opt/qt/include/QtWidgets/qlayout.h \
-  /usr/local/opt/qt/include/QtWidgets/qlayoutitem.h \
-  /usr/local/opt/qt/include/QtWidgets/qboxlayout.h \
-  /usr/local/opt/qt/include/QtWidgets/qgridlayout.h \
   /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QPushButton \
   /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /usr/local/opt/qt/include/QtWidgets/qabstractbutton.h \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QWidget \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QHeaderView \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qheaderview.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QLineEdit \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /usr/local/opt/qt/include/QtGui/qtextcursor.h \
+  /usr/local/opt/qt/include/QtGui/qtextdocument.h \
+  /usr/local/opt/qt/include/QtCore/qurl.h \
+  /usr/local/opt/qt/include/QtGui/qtextformat.h \
+  /usr/local/opt/qt/include/QtGui/qpen.h \
+  /usr/local/opt/qt/include/QtGui/qtextoption.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QListWidget \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /usr/local/opt/qt/include/QtWidgets/qlistview.h \
   /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/../DatabaseManager/DatabaseManager.h \
   /usr/local/opt/qt/include/QtSql/QSqlDatabase \
   /usr/local/opt/qt/include/QtSql/qsqldatabase.h \
@@ -407,6 +408,43 @@ CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o: \
   /usr/local/opt/qt/include/QtSql/qsqlquery.h \
   /usr/local/opt/qt/lib/QtCore.framework/Headers/QString \
   /usr/local/opt/qt/lib/QtCore.framework/Headers/qstring.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QVBoxLayout \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qboxlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qlayoutitem.h \
+  /usr/local/opt/qt/include/QtWidgets/qboxlayout.h \
+  /usr/local/opt/qt/include/QtWidgets/qgridlayout.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QHBoxLayout \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QWidget \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QHeaderView \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qheaderview.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QSplitter \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qsplitter.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QLabel \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlabel.h \
+  /usr/local/opt/qt/include/QtGui/qpicture.h \
+  /usr/local/opt/qt/include/QtCore/qiodevice.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QMessageBox \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /usr/local/opt/qt/include/QtWidgets/qdialog.h \
+  /usr/local/opt/qt/include/QtWidgets/qdialogbuttonbox.h \
+  /usr/local/opt/qt/lib/QtCore.framework/Headers/QCoreApplication \
+  /usr/local/opt/qt/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /usr/local/opt/qt/include/QtCore/qcoreevent.h \
+  /usr/local/opt/qt/include/QtCore/qbasictimer.h \
+  /usr/local/opt/qt/include/QtCore/qabstracteventdispatcher.h \
+  /usr/local/opt/qt/include/QtCore/qeventloop.h \
+  /usr/local/opt/qt/include/QtCore/qdeadlinetimer.h \
+  /usr/local/opt/qt/include/QtCore/qelapsedtimer.h \
+  /usr/local/opt/qt/include/QtCore/qnativeinterface.h \
+  /usr/local/opt/qt/include/QtCore/qcoreapplication_platform.h \
+  /usr/local/opt/qt/include/QtCore/qcoreapplication.h \
+  /usr/local/opt/qt/lib/QtCore.framework/Headers/QDebug \
+  /usr/local/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
+  /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/AddPasswordDialog.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QDialog \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qdialog.h \
   /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/../CryptoManager/CryptoManager.h \
   /usr/local/opt/qt/lib/QtCore.framework/Headers/QByteArray \
   /usr/local/opt/qt/lib/QtCore.framework/Headers/qbytearray.h

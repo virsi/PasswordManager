@@ -1,64 +1,192 @@
 #include "MainWindow.h"
-
-#include "MainWindow.h"
 #include <QVBoxLayout>
-#include <QPushButton>
+#include <QHBoxLayout>
 #include <QWidget>
 #include <QHeaderView>
-#include "../DatabaseManager/DatabaseManager.h"
-#include "../CryptoManager/CryptoManager.h"
+#include <QSplitter>
+#include <QLabel>
+#include <QMessageBox>
+#include <QCoreApplication>
+#include <QDebug>
+#include "AddPasswordDialog.h"
+#include "../CryptoManager/CryptoManager.h"  // если нужно шифровать
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+{
+    qDebug() << "Инициализация MainWindow начата";
+
+    if (!dbManager.openDatabase()) {
+        QMessageBox::critical(this, "Ошибка", "Не удалось подключиться к базе данных!");
+        qDebug() << "Ошибка подключения к базе данных";
+    }
+
     setupUI();
-    loadPasswords();
-}
+    qDebug() << "setupUI завершен";
 
-MainWindow::~MainWindow() {
-    delete tableWidget;
+    loadPasswords();
+    qDebug() << "loadPasswords завершен";
+
+    qDebug() << "Инициализация MainWindow завершена";
 }
 
 void MainWindow::setupUI() {
-    QWidget* centralWidget = new QWidget(this);
-    QVBoxLayout* layout = new QVBoxLayout();
+    qDebug() << "Начата настройка UI";
 
-    tableWidget = new QTableWidget(this);
-    tableWidget->setColumnCount(3);
-    tableWidget->setHorizontalHeaderLabels({ "Сервис", "Имя пользователя", "Пароль" });
-    tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    layout->addWidget(tableWidget);
+    auto *central = new QWidget(this);
+    auto *mainLayout = new QHBoxLayout(central);
 
-    // Кнопки (добавим обработчики позже)
-    QPushButton* addButton = new QPushButton("Добавить");
-    QPushButton* editButton = new QPushButton("Изменить");
-    QPushButton* deleteButton = new QPushButton("Удалить");
+    // Боковая панель категорий
+    categoryList = new QListWidget(this);
+    populateCategories();
 
-    layout->addWidget(addButton);
-    layout->addWidget(editButton);
-    layout->addWidget(deleteButton);
+    // Правая часть
+    auto *rightPanel = new QWidget(this);
+    auto *rightLayout = new QVBoxLayout(rightPanel);
 
-    centralWidget->setLayout(layout);
-    setCentralWidget(centralWidget);
+    // Верхняя панель (поиск + кнопка)
+    auto *topBar = new QHBoxLayout();
+    searchField = new QLineEdit(this);
+    searchField->setPlaceholderText("Поиск...");
+
+    addButton = new QPushButton("+ Добавить", this);
+    connect(addButton, &QPushButton::clicked, this, &MainWindow::onAddClicked);
+
+
+    topBar->addWidget(searchField);
+    topBar->addWidget(addButton);
+
+    // Таблица
+    passwordTable = new QTableWidget(this);
+    passwordTable->setColumnCount(3);
+    QStringList headers = {"Название", "Логин", "Пароль"};
+    passwordTable->setHorizontalHeaderLabels(headers);
+    passwordTable->horizontalHeader()->setStretchLastSection(true);
+    // passwordTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+    // passwordTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
+    // Кнопки управления
+    editButton = new QPushButton("✏ Редактировать", this);
+    connect(editButton, &QPushButton::clicked, this, &MainWindow::onEditClicked);
+
+    deleteButton = new QPushButton("🗑 Удалить", this);
+    connect(deleteButton, &QPushButton::clicked, this, &MainWindow::onDeleteClicked);
+
+    auto *buttonLayout = new QHBoxLayout();
+    buttonLayout->addWidget(editButton);
+    buttonLayout->addWidget(deleteButton);
+
+    // Собираем всё
+    rightLayout->addLayout(topBar);
+    rightLayout->addWidget(passwordTable);
+    rightLayout->addLayout(buttonLayout);
+
+    mainLayout->addWidget(categoryList);
+    mainLayout->addWidget(rightPanel);
+
+    setCentralWidget(central); // Убедитесь, что центральный виджет установлен
+    qDebug() << "Центральный виджет установлен";
+
+    setWindowTitle("Менеджер Паролей");
+    resize(800, 600);
+}
+
+void MainWindow::populateCategories() {
+    categoryList->addItem("📁 Все");
+    categoryList->addItem("🌐 Веб-сайты");
+    categoryList->addItem("🔐 Банки");
+    categoryList->addItem("💼 Работа");
+}
+
+void MainWindow::onAddClicked() {
+    AddPasswordDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted) {
+        QString service = dialog.getService();
+        QString login = dialog.getlogin();
+        QString password = dialog.getPassword();
+
+        // Шифруем пароль
+        CryptoManager crypto("master"); // В будущем можно получать от пользователя
+
+        QByteArray encryptedPassword;
+        try {
+            encryptedPassword = crypto.encrypt(password);
+        } catch (const std::exception& e) {
+            QMessageBox::critical(this, "Ошибка", QString("Шифрование не удалось: %1").arg(e.what()));
+            return;
+        }
+
+        if (!dbManager.addPassword(service, login, encryptedPassword)) {
+            QMessageBox::critical(this, "Ошибка", "Не удалось сохранить запись в базу данных.");
+            return;
+        }
+
+        // Обновляем таблицу
+        qDebug() << "Обновление таблицы после добавления записи...";
+        loadPasswords();
+    }
+}
+
+void MainWindow::onEditClicked() {
+    int row = passwordTable->currentRow();
+    if (row >= 0) {
+        QMessageBox::information(this, "Редактировать", "Редактирование записи на строке: " + QString::number(row));
+    } else {
+        QMessageBox::warning(this, "Редактировать", "Выберите запись для редактирования.");
+    }
+}
+
+void MainWindow::onDeleteClicked() {
+    int row = passwordTable->currentRow();
+    if (row >= 0) {
+        QMessageBox::StandardButton reply;
+        reply = QMessageBox::question(this, "Удалить", "Удалить выбранную запись?",
+                                      QMessageBox::Yes | QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            passwordTable->removeRow(row);  // пока просто удаляем из таблицы
+        }
+    } else {
+        QMessageBox::warning(this, "Удалить", "Выберите запись для удаления.");
+    }
 }
 
 void MainWindow::loadPasswords() {
-    DatabaseManager db;
+    qDebug() << "Загрузка паролей из базы данных...";
+    passwordTable->setRowCount(0); // Очистить таблицу перед обновлением
 
-    // Открываем базу данных
-    if (!db.openDatabase()) {
-        qDebug() << "Не удалось открыть базу данных.";
-        return;
-    }
+    QVector<PasswordEntry> entries = dbManager.getAllPasswords();
+    qDebug() << "Найдено записей:" << entries.size();
 
-    QVector<PasswordEntry> entries = db.getAllPasswords();
-
-    tableWidget->setRowCount(entries.size());
     for (int i = 0; i < entries.size(); ++i) {
-        const auto& e = entries[i];
-        tableWidget->setItem(i, 0, new QTableWidgetItem(e.service));
-        tableWidget->setItem(i, 1, new QTableWidgetItem(e.username));
-        tableWidget->setItem(i, 2, new QTableWidgetItem("[скрыто]")); // показываем скрытую строку
-    }
+        const auto& entry = entries[i];
+        qDebug() << "Добавление записи в таблицу:" << entry.service << entry.login;
 
-    // Закрываем базу данных
-    db.closeDatabase();
+        // Проверяем, что зашифрованный пароль не пуст
+        if (entry.encryptedPassword.isEmpty()) {
+            qDebug() << "Ошибка: зашифрованный пароль пуст для записи:" << entry.service;
+            continue; // Пропускаем некорректную запись
+        }
+
+        // Расшифровка пароля
+        CryptoManager crypto("master"); // в будущем заменить master-пароль
+        QString decryptedPassword;
+        try {
+            decryptedPassword = crypto.decrypt(entry.encryptedPassword.toUtf8());
+        } catch (const std::exception& e) {
+            qDebug() << "Ошибка при расшифровке пароля:" << e.what();
+            decryptedPassword = "[Ошибка шифрования]";
+        } catch (...) {
+            qDebug() << "Неизвестная ошибка при расшифровке пароля.";
+            decryptedPassword = "[Ошибка шифрования]";
+        }
+
+        passwordTable->insertRow(i);
+        passwordTable->setItem(i, 0, new QTableWidgetItem(entry.service));
+        passwordTable->setItem(i, 1, new QTableWidgetItem(entry.login));
+        passwordTable->setItem(i, 2, new QTableWidgetItem(decryptedPassword));
+
+        qDebug() << "Строка добавлена: " << i;
+    }
+    qDebug() << "Пароли успешно загружены в таблицу.";
 }

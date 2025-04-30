@@ -29,6 +29,7 @@ set(SOURCES
     src/CryptoManager/CryptoManager.cpp
     src/PasswordManager/PasswordManager.cpp
     src/UI/MainWindow.cpp
+    src/UI/AddPasswordDialog.cpp
 )
 
 set(HEADERS
@@ -36,10 +37,12 @@ set(HEADERS
     src/CryptoManager/CryptoManager.h
     src/PasswordManager/PasswordManager.h
     src/UI/MainWindow.h
+    src/UI/AddPasswordDialog.h
 )
 
 # Основной исполняемый файл
-add_executable(password_manager ${SOURCES} ${HEADERS})
+add_executable(password_manager ${SOURCES} ${HEADERS}
+    src/UI/MainWindow.ui)
 
 # Линкуем библиотеки
 target_link_libraries(password_manager
