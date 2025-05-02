@@ -22,3 +22,22 @@ private:
 };
 
 #endif // CRYPTOMANAGER_H
+
+
+// class CryptoManager {
+// public:
+//     explicit CryptoManager(const QString& password);
+
+//     void setPassword(const QString& password);
+
+//     QByteArray encrypt(const QString& plaintext);
+
+//     QString decrypt(const QByteArray& data);
+
+// private:
+//     QByteArray generateKey(const QString& password);
+
+//     QByteArray key;
+// };
+
+// #endif // CRYPTOMANAGER_H

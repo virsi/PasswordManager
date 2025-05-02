@@ -97,13 +97,16 @@ bool DatabaseManager::getPasswords() {
 }
 
 bool DatabaseManager::insertPassword(const QString& service, const QString& login, const QByteArray& encryptedPassword) {
+    QByteArray base64Password = encryptedPassword.toBase64();
+    qDebug() << "Сохраняемый пароль (Base64):" << base64Password;
+
     qDebug() << "Попытка вставить запись в таблицу 'passwords'...";
     QSqlQuery query;
     query.prepare("INSERT INTO passwords (service, login, password) VALUES (:service, :login, :password)");
 
     query.bindValue(":service", service);
     query.bindValue(":login", login);
-    query.bindValue(":password", encryptedPassword.toBase64());
+    query.bindValue(":password", base64Password);
 
     if (query.boundValues().size() != 3) {
         qDebug() << "Ошибка: количество привязанных параметров не совпадает с ожидаемым.";
@@ -185,5 +188,8 @@ QByteArray DatabaseManager::getPasswordById(int id) {
     QByteArray base64Password = query.value(0).toByteArray();
     qDebug() << "Получен пароль (Base64):" << base64Password << "для ID:" << id;
 
-    return QByteArray::fromBase64(base64Password);
+    QByteArray decodedPassword = QByteArray::fromBase64(base64Password);
+    qDebug() << "Декодированный пароль (hex):" << decodedPassword.toHex();
+
+    return decodedPassword;
 }

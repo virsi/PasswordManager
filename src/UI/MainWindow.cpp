@@ -160,6 +160,9 @@ void MainWindow::loadPasswords() {
 
     for (int i = 0; i < entries.size(); ++i) {
         const auto& entry = entries[i];
+        qDebug() << "Извлеченная запись: ID:" << entry.id << "Service:" << entry.service
+                 << "Login:" << entry.login << "Password (Base64):" << entry.encryptedPassword;
+
         qDebug() << "Добавление записи в таблицу:" << entry.service << entry.login;
 
         // Проверяем, что зашифрованный пароль не пуст
@@ -172,7 +175,7 @@ void MainWindow::loadPasswords() {
         CryptoManager crypto("master"); // в будущем заменить master-пароль
         QString decryptedPassword;
         try {
-            decryptedPassword = crypto.decrypt(entry.encryptedPassword.toUtf8());
+            decryptedPassword = crypto.decrypt(entry.encryptedPassword); // Убрано toUtf8()
         } catch (const std::exception& e) {
             qDebug() << "Ошибка при расшифровке пароля:" << e.what();
             decryptedPassword = "[Ошибка шифрования]";

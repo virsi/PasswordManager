@@ -9,7 +9,7 @@ struct PasswordEntry {
     int id;
     QString service;
     QString login;
-    QString encryptedPassword;
+    QByteArray encryptedPassword; //QString
 };
 
 class DatabaseManager {
