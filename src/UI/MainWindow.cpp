@@ -59,9 +59,10 @@ void MainWindow::setupUI() {
 
     // Таблица
     passwordTable = new QTableWidget(this);
-    passwordTable->setColumnCount(3);
-    QStringList headers = {"Название", "Логин", "Пароль"};
+    passwordTable->setColumnCount(4);
+    QStringList headers = {"ID", "Сервис", "Логин", "Пароль"};
     passwordTable->setHorizontalHeaderLabels(headers);
+    passwordTable->setColumnHidden(0, true); // Скрываем столбец с id
     passwordTable->horizontalHeader()->setStretchLastSection(true);
     // passwordTable->setSelectionBehavior(QAbstractItemView::SelectRows);
     // passwordTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -144,7 +145,17 @@ void MainWindow::onDeleteClicked() {
         reply = QMessageBox::question(this, "Удалить", "Удалить выбранную запись?",
                                       QMessageBox::Yes | QMessageBox::No);
         if (reply == QMessageBox::Yes) {
-            passwordTable->removeRow(row);  // пока просто удаляем из таблицы
+            // Получаем id из таблицы (предполагается, что id в первом скрытом столбце)
+            int id = passwordTable->item(row, 0)->text().toInt();
+
+            // Удаляем из базы данных
+            if (dbManager.deletePassword(id)) {
+                // Удаляем из таблицы
+                passwordTable->removeRow(row);
+                QMessageBox::information(this, "Удалено", "Запись успешно удалена.");
+            } else {
+                QMessageBox::critical(this, "Ошибка", "Не удалось удалить запись из базы данных.");
+            }
         }
     } else {
         QMessageBox::warning(this, "Удалить", "Выберите запись для удаления.");
@@ -185,9 +196,10 @@ void MainWindow::loadPasswords() {
         }
 
         passwordTable->insertRow(i);
-        passwordTable->setItem(i, 0, new QTableWidgetItem(entry.service));
-        passwordTable->setItem(i, 1, new QTableWidgetItem(entry.login));
-        passwordTable->setItem(i, 2, new QTableWidgetItem(decryptedPassword));
+        passwordTable->setItem(i, 0, new QTableWidgetItem(QString::number(entries[i].id))); // ID
+        passwordTable->setItem(i, 1, new QTableWidgetItem(entry.service));
+        passwordTable->setItem(i, 2, new QTableWidgetItem(entry.login));
+        passwordTable->setItem(i, 3, new QTableWidgetItem(decryptedPassword));
 
         qDebug() << "Строка добавлена: " << i;
     }
