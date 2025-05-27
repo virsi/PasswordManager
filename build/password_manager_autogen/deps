@@ -165,6 +165,7 @@ password_manager_autogen/timestamp: \
 	/usr/local/Cellar/cmake/3.30.3/share/cmake/Modules/Platform/Darwin-Initialize.cmake \
 	/usr/local/Cellar/cmake/3.30.3/share/cmake/Modules/Platform/Darwin.cmake \
 	/usr/local/Cellar/cmake/3.30.3/share/cmake/Modules/Platform/UnixPaths.cmake \
+	/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QSet \
 	/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString \
 	/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
 	/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h \

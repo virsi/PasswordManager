@@ -7,6 +7,7 @@
 #include <QLineEdit>
 #include <QListWidget>
 #include <QComboBox>
+#include <QSet>
 #include "../DatabaseManager/DatabaseManager.h"
 
 class MainWindow : public QMainWindow {
@@ -23,6 +24,8 @@ private:
     QLineEdit *searchField;
     QListWidget *categoryList;
     QComboBox *sortComboBox; // добавлено
+
+    QSet<int> revealedPasswordRows; // <--- добавьте это поле
 
     DatabaseManager dbManager;
 

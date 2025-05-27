@@ -111,6 +111,7 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Users/EV/Desktop/BMSTU/PasswordManager/src/DatabaseManager/DatabaseManager.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QSet \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h \

@@ -409,6 +409,7 @@
  mdp:/Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager_autogen/moc_predefs.h
  mdp:/Users/EV/Desktop/BMSTU/PasswordManager/src/DatabaseManager/DatabaseManager.h
  mdp:/Users/EV/Desktop/BMSTU/PasswordManager/src/UI/MainWindow.h
+ mdp:/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QSet
  mdp:/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString
  mdp:/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q17memory.h
  mdp:/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/q20functional.h

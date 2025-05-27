@@ -74,8 +74,47 @@ void MainWindow::setupUI() {
     passwordTable->setHorizontalHeaderLabels(headers);
     passwordTable->setColumnHidden(0, true); // Скрываем столбец с id
     passwordTable->horizontalHeader()->setStretchLastSection(true);
-    // passwordTable->setSelectionBehavior(QAbstractItemView::SelectRows);
-    // passwordTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
+    // Разрешаем редактирование только сервис, логин, пароль
+    passwordTable->setEditTriggers(QAbstractItemView::DoubleClicked | QAbstractItemView::SelectedClicked);
+
+    // Добавляем обработку клика по ячейке
+    connect(passwordTable, &QTableWidget::cellClicked, this, [this](int row, int column) {
+        if (column == 3) { // столбец "Пароль"
+            if (revealedPasswordRows.contains(row)) {
+                // Скрыть пароль
+                QVector<PasswordEntry> entries = dbManager.getAllPasswords();
+                if (row < entries.size()) {
+                    CryptoManager crypto("master");
+                    QString decryptedPassword;
+                    try {
+                        decryptedPassword = crypto.decrypt(entries[row].encryptedPassword);
+                    } catch (...) {
+                        decryptedPassword = "[Ошибка шифрования]";
+                    }
+                    QString maskedPassword = decryptedPassword.startsWith('[')
+                        ? decryptedPassword
+                        : QString(u'●').repeated(decryptedPassword.length());
+                    passwordTable->item(row, 3)->setText(maskedPassword);
+                }
+                revealedPasswordRows.remove(row);
+            } else {
+                // Показать пароль
+                QVector<PasswordEntry> entries = dbManager.getAllPasswords();
+                if (row < entries.size()) {
+                    CryptoManager crypto("master");
+                    QString decryptedPassword;
+                    try {
+                        decryptedPassword = crypto.decrypt(entries[row].encryptedPassword);
+                    } catch (...) {
+                        decryptedPassword = "[Ошибка шифрования]";
+                    }
+                    passwordTable->item(row, 3)->setText(decryptedPassword);
+                }
+                revealedPasswordRows.insert(row);
+            }
+        }
+    });
 
     // Кнопки управления
     editButton = new QPushButton("✏ Редактировать", this);
@@ -145,10 +184,77 @@ void MainWindow::onAddClicked() {
 
 void MainWindow::onEditClicked() {
     int row = passwordTable->currentRow();
-    if (row >= 0) {
-        QMessageBox::information(this, "Редактировать", "Редактирование записи на строке: " + QString::number(row));
-    } else {
+    if (row < 0) {
         QMessageBox::warning(this, "Редактировать", "Выберите запись для редактирования.");
+        return;
+    }
+
+    int id = passwordTable->item(row, 0)->text().toInt();
+    QString newService = passwordTable->item(row, 1)->text();
+    QString newLogin = passwordTable->item(row, 2)->text();
+    QString newPasswordMasked = passwordTable->item(row, 3)->text();
+
+    QVector<PasswordEntry> entries = dbManager.getAllPasswords();
+    auto it = std::find_if(entries.begin(), entries.end(), [id](const PasswordEntry& e){ return e.id == id; });
+    if (it == entries.end()) {
+        QMessageBox::critical(this, "Ошибка", "Не удалось найти запись в базе данных.");
+        return;
+    }
+    PasswordEntry oldEntry = *it;
+
+    QString oldDecryptedPassword;
+    try {
+        CryptoManager crypto("master");
+        oldDecryptedPassword = crypto.decrypt(oldEntry.encryptedPassword);
+    } catch (...) {
+        oldDecryptedPassword = "";
+    }
+
+    QString newPassword;
+    bool passwordChanged = false;
+    if (newPasswordMasked != QString(u'●').repeated(oldDecryptedPassword.length())) {
+        newPassword = newPasswordMasked;
+        passwordChanged = true;
+    } else {
+        newPassword = oldDecryptedPassword;
+    }
+
+    bool serviceChanged = (newService != oldEntry.service);
+    bool loginChanged = (newLogin != oldEntry.login);
+
+    if (!serviceChanged && !loginChanged && !passwordChanged) {
+        QMessageBox::information(this, "Редактировать", "Нет изменений для сохранения.");
+        return;
+    }
+
+    // --- обновление записи через методы DatabaseManager ---
+    bool ok = true;
+
+    // Обновляем сервис и логин, если они изменились
+    if (serviceChanged || loginChanged) {
+        QSqlQuery query;
+        query.prepare("UPDATE passwords SET service = :service, login = :login WHERE id = :id");
+        query.bindValue(":service", newService);
+        query.bindValue(":login", newLogin);
+        query.bindValue(":id", id);
+        if (!query.exec()) {
+            ok = false;
+        }
+    }
+
+    // Обновляем пароль (всегда, если был изменён или нет)
+    {
+        CryptoManager crypto("master");
+        QByteArray encrypted = crypto.encrypt(newPassword);
+        ok = ok && dbManager.updatePassword(id, encrypted);
+    }
+    // --- конец обновления ---
+
+    if (ok) {
+        QMessageBox::information(this, "Редактировать", "Изменения успешно сохранены.");
+        loadPasswords();
+    } else {
+        QMessageBox::critical(this, "Ошибка", "Не удалось сохранить изменения.");
     }
 }
 
@@ -193,6 +299,7 @@ void MainWindow::loadPasswords() {
     // иначе — по порядку добавления (ничего не делаем)
     // --- конец сортировки ---
 
+    revealedPasswordRows.clear(); // сбрасываем состояние при перезагрузке
     for (int i = 0; i < entries.size(); ++i) {
         const auto& entry = entries[i];
         qDebug() << "Извлеченная запись: ID:" << entry.id << "Service:" << entry.service
