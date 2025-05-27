@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_password_manager_FILE /Users/EV/Desktop/BMSTU/PasswordManager/build/password_manager)
-set(__QT_DEPLOY_TARGET_password_manager_TYPE EXECUTABLE)
