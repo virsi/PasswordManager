@@ -210,7 +210,7 @@ void MainWindow::loadPasswords() {
         CryptoManager crypto("master"); // в будущем заменить master-пароль
         QString decryptedPassword;
         try {
-            decryptedPassword = crypto.decrypt(entry.encryptedPassword); // Убрано toUtf8()
+            decryptedPassword = crypto.decrypt(entry.encryptedPassword);
         } catch (const std::exception& e) {
             qDebug() << "Ошибка при расшифровке пароля:" << e.what();
             decryptedPassword = "[Ошибка шифрования]";
@@ -219,11 +219,20 @@ void MainWindow::loadPasswords() {
             decryptedPassword = "[Ошибка шифрования]";
         }
 
+        // "Замазываем" пароль
+        QString maskedPassword;
+        if (decryptedPassword.startsWith('[')) {
+            // Если ошибка шифрования, показываем как есть
+            maskedPassword = decryptedPassword;
+        } else {
+            maskedPassword = QString(u'●').repeated(decryptedPassword.length());
+        }
+
         passwordTable->insertRow(i);
         passwordTable->setItem(i, 0, new QTableWidgetItem(QString::number(entries[i].id))); // ID
         passwordTable->setItem(i, 1, new QTableWidgetItem(entry.service));
         passwordTable->setItem(i, 2, new QTableWidgetItem(entry.login));
-        passwordTable->setItem(i, 3, new QTableWidgetItem(decryptedPassword));
+        passwordTable->setItem(i, 3, new QTableWidgetItem(maskedPassword)); // показываем замаскированный пароль
 
         qDebug() << "Строка добавлена: " << i;
     }
