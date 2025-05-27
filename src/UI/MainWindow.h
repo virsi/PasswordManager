@@ -6,6 +6,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QListWidget>
+#include <QComboBox>
 #include "../DatabaseManager/DatabaseManager.h"
 
 class MainWindow : public QMainWindow {
@@ -21,6 +22,7 @@ private:
     QPushButton *deleteButton;
     QLineEdit *searchField;
     QListWidget *categoryList;
+    QComboBox *sortComboBox; // добавлено
 
     DatabaseManager dbManager;
 
@@ -33,6 +35,7 @@ private slots:
     void onEditClicked();
     void onDeleteClicked();
     void onSearchTextChanged(const QString& text);
+    void onSortTypeChanged(int index); // добавлено
 
 };
 

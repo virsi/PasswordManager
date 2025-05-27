@@ -281,6 +281,7 @@
   /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qtsql-config.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qtsqlexports.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtSql.framework/Versions/A/Headers/qtsqlglobal.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QComboBox \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QListWidget \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
@@ -292,6 +293,7 @@
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
+  /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qcombobox.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlineedit.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qlistview.h \

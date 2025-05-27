@@ -397,6 +397,8 @@ CMakeFiles/password_manager.dir/src/UI/MainWindow.cpp.o: \
   /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QListWidget \
   /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlistwidget.h \
   /usr/local/opt/qt/include/QtWidgets/qlistview.h \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QComboBox \
+  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qcombobox.h \
   /Users/EV/Desktop/BMSTU/PasswordManager/src/UI/../DatabaseManager/DatabaseManager.h \
   /usr/local/opt/qt/include/QtSql/QSqlDatabase \
   /usr/local/opt/qt/include/QtSql/qsqldatabase.h \

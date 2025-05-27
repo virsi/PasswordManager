@@ -50,13 +50,21 @@ void MainWindow::setupUI() {
     searchField = new QLineEdit(this);
     searchField->setPlaceholderText("Поиск...");
 
-    connect(searchField, &QLineEdit::textChanged, this, &MainWindow::onSearchTextChanged); // добавлено
+    connect(searchField, &QLineEdit::textChanged, this, &MainWindow::onSearchTextChanged);
+
+    // --- добавляем сортировку ---
+    sortComboBox = new QComboBox(this);
+    sortComboBox->addItem("По порядку добавления");
+    sortComboBox->addItem("По алфавиту (сервис)");
+    connect(sortComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MainWindow::onSortTypeChanged);
+    // --- конец добавления ---
 
     addButton = new QPushButton("+ Добавить", this);
     connect(addButton, &QPushButton::clicked, this, &MainWindow::onAddClicked);
 
 
     topBar->addWidget(searchField);
+    topBar->addWidget(sortComboBox); // добавлено
     topBar->addWidget(addButton);
 
     // Таблица
@@ -175,6 +183,16 @@ void MainWindow::loadPasswords() {
     QVector<PasswordEntry> entries = dbManager.getAllPasswords();
     qDebug() << "Найдено записей:" << entries.size();
 
+    // --- сортировка ---
+    if (sortComboBox && sortComboBox->currentIndex() == 1) {
+        // По алфавиту (сервис)
+        std::sort(entries.begin(), entries.end(), [](const PasswordEntry& a, const PasswordEntry& b) {
+            return a.service.localeAwareCompare(b.service) < 0;
+        });
+    }
+    // иначе — по порядку добавления (ничего не делаем)
+    // --- конец сортировки ---
+
     for (int i = 0; i < entries.size(); ++i) {
         const auto& entry = entries[i];
         qDebug() << "Извлеченная запись: ID:" << entry.id << "Service:" << entry.service
@@ -227,4 +245,8 @@ void MainWindow::onSearchTextChanged(const QString& text) {
         }
         passwordTable->setRowHidden(row, !match && !search.isEmpty());
     }
+}
+
+void MainWindow::onSortTypeChanged(int /*index*/) {
+    loadPasswords();
 }
