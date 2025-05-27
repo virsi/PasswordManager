@@ -32,6 +32,7 @@ private slots:
     void onAddClicked();
     void onEditClicked();
     void onDeleteClicked();
+    void onSearchTextChanged(const QString& text);
 
 };
 

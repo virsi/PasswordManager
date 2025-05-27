@@ -50,6 +50,8 @@ void MainWindow::setupUI() {
     searchField = new QLineEdit(this);
     searchField->setPlaceholderText("Поиск...");
 
+    connect(searchField, &QLineEdit::textChanged, this, &MainWindow::onSearchTextChanged); // добавлено
+
     addButton = new QPushButton("+ Добавить", this);
     connect(addButton, &QPushButton::clicked, this, &MainWindow::onAddClicked);
 
@@ -85,6 +87,10 @@ void MainWindow::setupUI() {
 
     mainLayout->addWidget(categoryList);
     mainLayout->addWidget(rightPanel);
+
+    // Устанавливаем stretch: categoryList - меньше, rightPanel (таблица) - больше
+    mainLayout->setStretch(0, 1); // categoryList
+    mainLayout->setStretch(1, 3); // rightPanel
 
     setCentralWidget(central); // Убедитесь, что центральный виджет установлен
     qDebug() << "Центральный виджет установлен";
@@ -204,4 +210,21 @@ void MainWindow::loadPasswords() {
         qDebug() << "Строка добавлена: " << i;
     }
     qDebug() << "Пароли успешно загружены в таблицу.";
+    onSearchTextChanged(searchField->text()); // фильтруем после загрузки
+}
+
+// Новый слот для поиска
+void MainWindow::onSearchTextChanged(const QString& text) {
+    QString search = text.trimmed();
+    for (int row = 0; row < passwordTable->rowCount(); ++row) {
+        bool match = false;
+        for (int col = 1; col <= 2; ++col) { // 1: сервис, 2: логин
+            QTableWidgetItem* item = passwordTable->item(row, col);
+            if (item && item->text().contains(search, Qt::CaseInsensitive)) {
+                match = true;
+                break;
+            }
+        }
+        passwordTable->setRowHidden(row, !match && !search.isEmpty());
+    }
 }
